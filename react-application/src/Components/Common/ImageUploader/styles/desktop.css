@@ -1,0 +1,24 @@
+.image-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.upload-icon {
+  margin-right: 8px;
+}
+
+.image-preview {
+  max-width: 100px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+}
