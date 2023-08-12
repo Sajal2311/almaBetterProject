@@ -1,0 +1,7 @@
+@media (max-width: 480px) {
+  .navigation-list {
+    justify-content: flex-start;
+    padding: 10px;
+    flex-direction: column;
+  }
+}
