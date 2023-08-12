@@ -1,32 +1,44 @@
-import { Switch, Route, Link } from 'react-router-dom';
-import './styles/index.css';
-import Home from '../Home';
+import { Switch, Route, Link } from "react-router-dom";
+import "./styles/index.css";
+import Home from "../Home";
+import { useState } from "react";
 
 const NavigationBar = () => {
+  const [currentTab, setCurrentTab] = useState("");
+  const handleTabClick = (value) => {
+    console.log(value, "value");
+    setCurrentTab(value);
+  };
   return (
     <>
-      <div className='menu'>
-        <ul id='nav-list' className='navigation-list'>
-          <li key='Home'>
-            <Link to='/'>Home</Link>
+      <div className="menu">
+        <ul id="nav-list" className="navigation-list">
+          <li key="Create">
+            <Link
+              to="/"
+              onClick={() => handleTabClick("createFlashCard")}
+              className={currentTab === "createFlashCard" ? "active" : ""}
+            >
+              Create Flash Card
+            </Link>
           </li>
-          <li key='MyQuiz'>
-            <Link to='/my-quizes'>My Quizes</Link>
-          </li>
-          <li key='PlayQuiz'>
-            <Link to='/play-quizes'>Play Quizes</Link>
+          <li key="MyFlashCard">
+            <Link
+              to="/my-flash-card"
+              onClick={() => handleTabClick("myFlashCard")}
+              className={currentTab === "myFlashCard" ? "active" : ""}
+            >
+              My Flash Card
+            </Link>
           </li>
         </ul>
       </div>
       <Switch>
-        <Route path='/' exact>
+        <Route path="/" exact>
           <Home />
         </Route>
-        <Route path='/my-quizes'>
-          <div>My Quizes</div>
-        </Route>
-        <Route path='/play-quizes'>
-          <div>Play Quizes</div>
+        <Route path="/myflashcard">
+          <div>My Flash Card</div>
         </Route>
       </Switch>
     </>

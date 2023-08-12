@@ -1,11 +1,19 @@
 .navigation-list {
   display: flex;
-  justify-content: end;
+  justify-content: flex-start;
+  padding: 0;
   gap: 10px;
   list-style: none;
 
-  & li,
-  & a {
-    text-decoration: none;
+  & li {
+    & a {
+      text-decoration: none;
+      font-size: 18px;
+    }
   }
+}
+
+.active {
+  color: red;
+  border-bottom: 1px solid red;
 }

@@ -1,0 +1,35 @@
+.form-container {
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 2px 1px 4px grey;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+
+.formUpper {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+#creatGroup {
+  display: block;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+}
