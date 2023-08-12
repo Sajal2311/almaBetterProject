@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./styles/index.css"; // You'll create this CSS file for styling
 
-const ImageUploader = () => {
+const ImageUploader = (props) => {
+  const { name, onImageChange } = props;
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageChange = (event) => {
     const imageFile = event.target.files[0];
     setSelectedImage(imageFile);
+    onImageChange(URL.createObjectURL(imageFile)); // Pass the object URL to the parent
   };
 
   return (
@@ -19,9 +21,10 @@ const ImageUploader = () => {
           </label>
           <input
             type="file"
-            id="upload-input"
+            id={`${name}-input`}
             accept="image/*"
             onChange={handleImageChange}
+            name={name}
           />
         </div>
       </div>
