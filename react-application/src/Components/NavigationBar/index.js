@@ -3,6 +3,7 @@ import "./styles/index.css";
 import Home from "../Home";
 import { useState } from "react";
 import MyFlashCard from "../MyFlashCard";
+import FlashCardDetails from "../FlashCardDetails";
 
 const NavigationBar = () => {
   const [currentTab, setCurrentTab] = useState("");
@@ -38,8 +39,11 @@ const NavigationBar = () => {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/my-flash-card">
+        <Route path="/my-flash-card" exact>
           <MyFlashCard />
+        </Route>
+        <Route path="/my-flash-card/:name">
+          <FlashCardDetails />
         </Route>
       </Switch>
     </>

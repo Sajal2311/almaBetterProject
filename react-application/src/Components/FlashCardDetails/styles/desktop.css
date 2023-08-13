@@ -1,0 +1,32 @@
+.details-container {
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.section-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.white-container {
+  background-color: white;
+  box-shadow: 2px 2px 2px grey;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.detail-body-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.array-image {
+  width: 350px;
+  height: 300px;
+}

@@ -1,4 +1,3 @@
-import Card from "../Common/Card";
 import CreateForm from "../CreateForm";
 // import NewQuizImage from "../../assets/newQuiz.jpg";
 // import MyQuizImage from "../../assets/myquiz.jpg";

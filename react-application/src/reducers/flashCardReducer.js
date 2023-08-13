@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 const flashCardReducer = (state = { flashCardData: [] }, action) => {
   switch (action.type) {
     case "ADD_FORM_DATA": {
@@ -8,6 +6,13 @@ const flashCardReducer = (state = { flashCardData: [] }, action) => {
       return {
         ...state,
         flashCardData: [...prevFlashCardData, flashCardData],
+      };
+    }
+    case "ADD_DESCRIPTION": {
+      const flashCardDetails = action.payload;
+      return {
+        ...state,
+        flashCardDetails,
       };
     }
     default:

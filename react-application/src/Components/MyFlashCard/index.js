@@ -1,12 +1,16 @@
 import { useSelector } from "react-redux";
-
+import FlashCardTile from "../FlashCardTiles";
+import "./styles/index.css";
 const MyFlashCard = () => {
   const flashCardReducer = useSelector((state) => state.flashCardReducer);
-  console.log("data", flashCardReducer.flashCardData);
+  const flashCardlist = flashCardReducer.flashCardData;
   return (
     <>
-      <h1>FormData</h1>
-      <img src={flashCardReducer.flashCardData[0].groupImage} />
+      <div className="view-container">
+        <div className="flash-card-container">
+          {flashCardlist && <FlashCardTile flashCardlist={flashCardlist} />}
+        </div>
+      </div>
     </>
   );
 };
